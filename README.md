@@ -1,6 +1,6 @@
 <p align="center"><img src="https://github.com/Juandavid716/gophysics/blob/master/logo.png"></p>
 
-# Gogeom - A Physics library for the Go programming language.
+# Gogphysics - A Physics library for the Go programming language.
 
 ```
 This is a Physical library for Go Language.
