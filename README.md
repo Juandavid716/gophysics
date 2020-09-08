@@ -4,7 +4,7 @@
 
 ```
 This is a Physical library for Go Language.
-Which includes multiple Geometrical calculations like Circle, Lines etc in different forms.
+Which includes multiple physical and mathematical formulas.
 ```
 ## Installation
 
@@ -31,17 +31,39 @@ go get -u github.com/Juandavid716/gophysics
 
 ### Example
 
-...
+
+```
+package main
+
+import (
+	"fmt"
+
+	ellipse "github.com/Juandavid716/gophysics"
+)
 
 
-...
+func main() {
+
+	// Init the function where parameters are (initial velocity, acceleration)
+	fy := disp.VelocityAcc(4, 5)
+	fmt.Println(fy(3))
+
+	// Init the function where parameters are (initial velocity, acceleration, initial displacement, final displacement)
+	fmt.Println(disp.VelocityDisp(3, 5, 6, 8))
+}
+
+Output
+19
+29
+
+```
 
 
 ## Functions
-| Equations                                   | Method                            | Arguments       |  Results | 
+| Equations                                   | Method                            | Arguments       |  Return type | 
 | :-------------                         |:-------------                           | :-----            |  :------  | 
-| <a href="https://www.codecogs.com/eqnedit.php?latex=V&space;=&space;V_{o}&space;&plus;&space;at" target="_blank"><img src="https://latex.codecogs.com/gif.latex?V&space;=&space;V_{o}&space;&plus;&space;at" title="V = V_{o} + at" /></a>|     |           |     | 
-|  <a href="https://www.codecogs.com/eqnedit.php?latex=V^{2}&space;=&space;Vo^{2}&space;&plus;&space;2a(x_{f}-x_{o})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?V^{2}&space;=&space;Vo^{2}&space;&plus;&space;2a(x_{f}-x_{o})" title="V^{2} = Vo^{2} + 2a(x_{f}-x_{o})" /></a>|   |            |   | 
+| <a href="https://www.codecogs.com/eqnedit.php?latex=V&space;=&space;V_{o}&space;&plus;&space;at" target="_blank"><img src="https://latex.codecogs.com/gif.latex?V&space;=&space;V_{o}&space;&plus;&space;at" title="V = V_{o} + at" /></a>|   VelocityAcc()  |      Vo, a float64     |  float64    | 
+|  <a href="https://www.codecogs.com/eqnedit.php?latex=V^{2}&space;=&space;Vo^{2}&space;&plus;&space;2a(x_{f}-x_{o})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?V^{2}&space;=&space;Vo^{2}&space;&plus;&space;2a(x_{f}-x_{o})" title="V^{2} = Vo^{2} + 2a(x_{f}-x_{o})" /></a>|  VelocityDisp() |        v0, a, Xo, Xf    |  float64 | 
 
 
 # Displacement 
@@ -88,7 +110,7 @@ Output
 
 
 ## Functions
-| Equations                                   | Method                            | Arguments       |  Results | 
+| Equations                                   | Method                            | Arguments       |  Return type | 
 | :-------------                         |:-------------                           | :-----            |  :------  | 
 | <a href="https://www.codecogs.com/eqnedit.php?latex=x=&space;\frac{1}{2}(V&space;&plus;&space;V_{o})t&space;&plus;&space;x_{0}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x=&space;\frac{1}{2}(V&space;&plus;&space;V_{o})t&space;&plus;&space;x_{0}" title="x= \frac{1}{2}(V + V_{o})t + x_{0}" /></a>|  DisplaceAcc()   |     Vo, a, Xo   float64   |   float64  | 
 | <a href="https://www.codecogs.com/eqnedit.php?latex=x&space;=&space;V_{0}t&plus;&space;\frac{1}{2}at^{2}&space;&plus;&space;x_{o}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x&space;=&space;V_{0}t&plus;&space;\frac{1}{2}at^{2}&space;&plus;&space;x_{o}" title="x = V_{0}t+ \frac{1}{2}at^{2} + x_{o}" /></a>|  DisplaceVec() |    Vo, Vf, Xo   float64    | float64  | 
