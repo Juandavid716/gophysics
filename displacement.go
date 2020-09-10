@@ -15,7 +15,7 @@ func DisplaceAcc(v0, a, s0 float64) func(float64) float64 {
 //DisplaceVec calculates the displacement from Velocity.
 func DisplaceVec(v0, vf, s0 float64) func(float64) float64 {
 	fx := func(t float64) float64 {
-		return 0.5*(v0+vf)*t + s0
+		return 0.5*(v0+vf)*math.Abs(t) + s0
 	}
 	return fx
 }

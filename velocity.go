@@ -5,7 +5,7 @@ import "math"
 // VelocityAcc calculates the Velocity from acceleration.
 func VelocityAcc(v0, a float64) func(float64) float64 {
 	fx := func(t float64) float64 {
-		return v0 + a*t
+		return v0 + a*math.Abs(t)
 	}
 	return fx
 }
