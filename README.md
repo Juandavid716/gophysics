@@ -38,7 +38,7 @@ package main
 import (
 	"fmt"
 
-	ellipse "github.com/Juandavid716/gophysics"
+	disp "github.com/Juandavid716/gophysics"
 )
 
 
@@ -83,7 +83,7 @@ package main
 import (
 	"fmt"
 
-	ellipse "github.com/Juandavid716/gophysics"
+	disp "github.com/Juandavid716/gophysics"
 )
 
 
