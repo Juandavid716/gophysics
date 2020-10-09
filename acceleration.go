@@ -16,3 +16,5 @@ func AccelerationDisp(v0, vf, s0, sf float64) float64 {
 	return (math.Pow(vf, 2) - math.Pow(v0, 2)) / (2 * (sf - s0))
 
 }
+
+
